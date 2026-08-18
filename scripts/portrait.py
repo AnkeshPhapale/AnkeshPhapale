@@ -84,7 +84,7 @@ def escape_xml(s: str) -> str:
     )
 
 
-def build_svg(rows: list[str], display_width: int, fill: str = "currentColor") -> str:
+def build_svg(rows: list[str], display_width: int, fill: str = "#38bdf8") -> str:
     cols = max(len(r) for r in rows) if rows else 0
     width_px = cols * CHAR_W
     height_px = len(rows) * FONT_SIZE * LINE_HEIGHT_FACTOR
@@ -145,7 +145,7 @@ def main():
     ap.add_argument("--cols", type=int, default=90)
     ap.add_argument("--display-width", type=int, default=460)
     ap.add_argument("--clahe-clip", type=float, default=3.0)
-    ap.add_argument("--fill", default="currentColor")
+    ap.add_argument("--fill", default="#38bdf8")
     ap.add_argument("--skip-rembg", action="store_true", help="Skip background removal (image already has a plain bg)")
     args = ap.parse_args()
 

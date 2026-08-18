@@ -2,15 +2,21 @@
 
 <br>
 
-# Ankesh Phapale
+# Hi, I'm Ankesh Phapale 👋
 
 <img src="headings/intro.svg" alt="about" width="200" />
 
 <blockquote>
-Data engineer building reliable data pipelines and useful systems.
+Data engineer building reliable data pipelines, analytics, and useful systems.
 </blockquote>
 
 <samp>PySpark · Scala · Delta Lake · Kafka · Databricks · Oracle Cloud AIDP</samp>
+
+<br><br>
+
+🌱 Currently exploring scalable data engineering, cloud platforms, and applied AI.
+
+📫 Find me on [GitHub](https://github.com/AnkeshPhapale).
 
 <br><br>
 

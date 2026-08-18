@@ -19,7 +19,7 @@ def build_svg(label: str, width: int, height: int = 24) -> str:
     y_line = height / 2
     return f'''<svg viewBox="0 0 {width} {height}" width="{width}" height="{height}" \
 xmlns="http://www.w3.org/2000/svg" font-family="{FONT_FAMILY}">
-<style>text{{fill:currentColor}} line{{stroke:currentColor;stroke-opacity:.35}}</style>
+<style>text{{fill:#38bdf8}} line{{stroke:#7dd3fc;stroke-opacity:.65}}</style>
 <text x="0" y="{y_text}" font-size="13" letter-spacing="1.5">{label}</text>
 <line x1="{text_w}" y1="{y_line}" x2="{width}" y2="{y_line}" stroke-width="1" />
 </svg>'''

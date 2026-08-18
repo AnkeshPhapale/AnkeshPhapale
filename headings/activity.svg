@@ -1,5 +1,5 @@
 <svg viewBox="0 0 460 24" width="460" height="24" xmlns="http://www.w3.org/2000/svg" font-family="heading-mono, monospace">
-<style>text{fill:currentColor} line{stroke:currentColor;stroke-opacity:.35}</style>
+<style>text{fill:#38bdf8} line{stroke:#7dd3fc;stroke-opacity:.65}</style>
 <text x="0" y="16.0" font-size="13" letter-spacing="1.5">activity</text>
 <line x1="72.0" y1="12.0" x2="460" y2="12.0" stroke-width="1" />
 </svg>

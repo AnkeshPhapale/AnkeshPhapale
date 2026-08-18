@@ -18,7 +18,7 @@ from datetime import datetime, timedelta, timezone
 
 RAMP = " .`:-=+*cs#%@"  # same ramp as the portrait, for the year heatmap
 FONT_FAMILY = "basic-mono, monospace"
-FG = "currentColor"
+FG = "#38bdf8"
 
 API_URL = "https://api.github.com/graphql"
 

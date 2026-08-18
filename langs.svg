@@ -1,0 +1,20 @@
+<svg viewBox="0 0 460 156" width="460" height="156" xmlns="http://www.w3.org/2000/svg" font-family="basic-mono, monospace"><style>text{fill:currentColor} .dim{opacity:.55}</style>
+<text x="10" y="26" font-size="13">HTML</text>
+<rect x="140" y="15" width="69.8" height="12" fill="currentColor" opacity="0.85" />
+<text x="390" y="26" font-size="12" class="dim">29.1%</text>
+<text x="10" y="48" font-size="13">JavaScript</text>
+<rect x="140" y="37" width="67.7" height="12" fill="currentColor" opacity="0.85" />
+<text x="390" y="48" font-size="12" class="dim">28.2%</text>
+<text x="10" y="70" font-size="13">PHP</text>
+<rect x="140" y="59" width="43.4" height="12" fill="currentColor" opacity="0.85" />
+<text x="390" y="70" font-size="12" class="dim">18.1%</text>
+<text x="10" y="92" font-size="13">Python</text>
+<rect x="140" y="81" width="26.1" height="12" fill="currentColor" opacity="0.85" />
+<text x="390" y="92" font-size="12" class="dim">10.9%</text>
+<text x="10" y="114" font-size="13">Jupyter Notebook</text>
+<rect x="140" y="103" width="17.3" height="12" fill="currentColor" opacity="0.85" />
+<text x="390" y="114" font-size="12" class="dim">7.2%</text>
+<text x="10" y="136" font-size="13">SCSS</text>
+<rect x="140" y="125" width="15.7" height="12" fill="currentColor" opacity="0.85" />
+<text x="390" y="136" font-size="12" class="dim">6.5%</text>
+</svg>

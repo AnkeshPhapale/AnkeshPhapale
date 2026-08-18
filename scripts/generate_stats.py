@@ -129,7 +129,10 @@ def svg_open(width, height):
     return (
         f'<svg viewBox="0 0 {width} {height}" width="{width}" height="{height}" '
         f'xmlns="http://www.w3.org/2000/svg" font-family="{FONT_FAMILY}">'
-        f'<style>text{{fill:{FG}}} .dim{{opacity:.55}}</style>'
+        '<defs><linearGradient id="accent" x1="0%" x2="100%" y1="0%" y2="100%">'
+        '<stop offset="0%" stop-color="#38bdf8"/><stop offset="55%" stop-color="#818cf8"/>'
+        '<stop offset="100%" stop-color="#2dd4bf"/></linearGradient></defs>'
+        f'<style>text{{fill:#0f172a}} .dim{{fill:#64748b}} .accent{{fill:url(#accent)}}</style>'
     )
 
 
@@ -139,7 +142,7 @@ def render_stats_svg(total, weekly, out_path):
     max_v = max(bars) if bars and max(bars) else 1
     bar_w = (w - 20) / len(bars)
     parts = [svg_open(w, h)]
-    parts.append(f'<text x="10" y="30" font-size="26">{total}</text>')
+    parts.append(f'<text x="10" y="30" font-size="26" class="accent">{total}</text>')
     parts.append(f'<text x="10" y="50" font-size="12" class="dim">contributions, last 12 months</text>')
     base_y = h - 12
     max_bar_h = 55
@@ -148,7 +151,7 @@ def render_stats_svg(total, weekly, out_path):
         x = 10 + i * bar_w
         parts.append(
             f'<rect x="{x:.2f}" y="{base_y - bh:.2f}" width="{max(bar_w - 1, 1):.2f}" '
-            f'height="{bh:.2f}" fill="{FG}" opacity="0.85" />'
+            f'height="{bh:.2f}" fill="url(#accent)" opacity="0.9" />'
         )
     parts.append("</svg>")
     with open(out_path, "w") as f:
@@ -158,14 +161,14 @@ def render_stats_svg(total, weekly, out_path):
 def render_streak_svg(streak, out_path):
     w, h = 460, 90
     parts = [svg_open(w, h)]
-    parts.append(f'<text x="10" y="28" font-size="20">{streak["current"]} day streak</text>')
+    parts.append(f'<text x="10" y="28" font-size="20" fill="#7c3aed">{streak["current"]} day streak</text>')
     if streak["current_start"] and streak["current_end"]:
         parts.append(
             f'<text x="10" y="46" font-size="12" class="dim">'
             f'{streak["current_start"]} to {streak["current_end"]}</text>'
         )
     parts.append(
-        f'<text x="10" y="70" font-size="14">longest: {streak["longest"]} days</text>'
+        f'<text x="10" y="70" font-size="14" fill="#0f766e">longest: {streak["longest"]} days</text>'
     )
     if streak["longest_start"] and streak["longest_end"]:
         parts.append(
@@ -179,10 +182,12 @@ def render_streak_svg(streak, out_path):
 
 def render_langs_svg(repos, out_path):
     totals = {}
+    colors = {}
     for repo in repos:
         for edge in repo["languages"]["edges"]:
             name = edge["node"]["name"]
             totals[name] = totals.get(name, 0) + edge["size"]
+            colors[name] = edge["node"]["color"] or "#38bdf8"
 
     ranked = sorted(totals.items(), key=lambda kv: kv[1], reverse=True)[:6]
     total_bytes = sum(v for _, v in ranked) or 1
@@ -195,7 +200,7 @@ def render_langs_svg(repos, out_path):
         bar_w = pct / 100 * 240
         parts.append(f'<text x="10" y="{y}" font-size="13">{name}</text>')
         parts.append(
-            f'<rect x="140" y="{y - 11}" width="{bar_w:.1f}" height="12" fill="{FG}" opacity="0.85" />'
+            f'<rect x="140" y="{y - 11}" width="{bar_w:.1f}" height="12" fill="{colors[name]}" opacity="0.9" />'
         )
         parts.append(f'<text x="390" y="{y}" font-size="12" class="dim">{pct:.1f}%</text>')
         y += 22
@@ -217,12 +222,13 @@ def render_year_svg(weeks, out_path):
         for di, d in enumerate(wk["contributionDays"]):
             level = int((d["contributionCount"] / max_c) * (len(RAMP) - 1)) if max_c else 0
             level = max(0, min(level, len(RAMP) - 1))
-            opacity = 0.08 + (level / (len(RAMP) - 1)) * 0.85
+            palette = ["#e2e8f0", "#bae6fd", "#7dd3fc", "#818cf8", "#8b5cf6", "#14b8a6"]
+            color = palette[min(len(palette) - 1, round(level / (len(RAMP) - 1) * (len(palette) - 1)))]
             x = 10 + wi * (cell + gap)
             y = 10 + di * (cell + gap)
             parts.append(
                 f'<rect x="{x}" y="{y}" width="{cell}" height="{cell}" rx="2" '
-                f'fill="{FG}" opacity="{opacity:.2f}"><title>{d["date"]}: {d["contributionCount"]}</title></rect>'
+                f'fill="{color}"><title>{d["date"]}: {d["contributionCount"]}</title></rect>'
             )
     parts.append("</svg>")
     with open(out_path, "w") as f:

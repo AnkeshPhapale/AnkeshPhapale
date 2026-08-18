@@ -24,7 +24,7 @@ RAMP = " .`:-=+*cs#%@"
 # Grid geometry the guide's SVGs are built around.
 CHAR_W = 7.74          # advance width in px for font-size 12.9 (0.600em)
 FONT_SIZE = 12.9
-LINE_HEIGHT_FACTOR = 1.0  # rows are packed at char cell height
+LINE_HEIGHT_FACTOR = 1.16  # extra leading prevents fallback-font overlap on GitHub
 
 
 def remove_background(img: Image.Image) -> Image.Image:
@@ -56,6 +56,17 @@ def process_to_gray(img: Image.Image, clahe_clip: float = 3.0) -> np.ndarray:
     normalized = contrasted.astype(np.float64) / 255.0
     darkened = np.power(normalized, 1.7) * 255.0
     return darkened.astype(np.uint8)
+
+
+def crop_to_face(img: Image.Image) -> Image.Image:
+    """Crop the central head-and-shoulders area for a clearer ASCII portrait."""
+    crop_w = int(img.width * 0.62)
+    crop_h = int(img.height * 0.76)
+    left = (img.width - crop_w) // 2
+    top = max(0, int(img.height * 0.03))
+    right = left + crop_w
+    bottom = min(img.height, top + crop_h)
+    return img.crop((left, top, right, bottom))
 
 
 def to_ascii_rows(gray: np.ndarray, cols: int) -> list[str]:
@@ -118,7 +129,10 @@ def build_svg(rows: list[str], display_width: int, fill: str = "#38bdf8") -> str
         parts.append("  </rect>")
         parts.append("</clipPath>")
         parts.append(f'<g clip-path="url(#{clip_id})">')
-        parts.append(f'  <text x="0" y="{y:.2f}" xml:space="preserve">{text_escaped}</text>')
+        parts.append(
+            f'  <text x="0" y="{y:.2f}" textLength="{width_px:.2f}" '
+            f'lengthAdjust="spacingAndGlyphs" xml:space="preserve">{text_escaped}</text>'
+        )
         parts.append("</g>")
         # cursor block riding the wipe edge
         parts.append(
@@ -147,9 +161,13 @@ def main():
     ap.add_argument("--clahe-clip", type=float, default=3.0)
     ap.add_argument("--fill", default="#38bdf8")
     ap.add_argument("--skip-rembg", action="store_true", help="Skip background removal (image already has a plain bg)")
+    ap.add_argument("--face-crop", action="store_true", help="Crop around the largest detected face")
     args = ap.parse_args()
 
     img = Image.open(args.input)
+
+    if args.face_crop:
+        img = crop_to_face(img)
 
     if not args.skip_rembg:
         print("Removing background (first run downloads ~176MB model, cached after)...")

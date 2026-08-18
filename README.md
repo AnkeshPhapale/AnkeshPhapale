@@ -1,0 +1,26 @@
+<img src="ascii_portrait.svg" alt="ASCII portrait" width="460" />
+
+<br>
+
+# Ankesh Phapale
+
+<img src="headings/intro.svg" alt="about" width="200" />
+
+<blockquote>
+Data engineer building reliable data pipelines and useful systems.
+</blockquote>
+
+<samp>PySpark · Scala · Delta Lake · Kafka · Databricks · Oracle Cloud AIDP</samp>
+
+<br><br>
+
+<img src="headings/activity.svg" alt="activity" width="200" />
+
+<img src="stats.svg" alt="contribution stats" width="460" /><br>
+<img src="streak.svg" alt="streaks" width="460" /><br>
+<img src="langs.svg" alt="top languages" width="460" /><br>
+<img src="year.svg" alt="year at a glance" width="460" />
+
+<br><br>
+
+<sub>Generated inside this repository by a scheduled action. Zero third-party requests.</sub>

@@ -7,7 +7,7 @@
 <img src="headings/intro.svg" alt="about" width="200" />
 
 <blockquote>
-Data engineer building reliable data pipelines, analytics, and useful systems.
+AI Data engineer building reliable data pipelines, analytics, and useful systems.
 </blockquote>
 
 <samp>PySpark · Scala · Delta Lake · Kafka · Databricks · Oracle Cloud AIDP</samp>

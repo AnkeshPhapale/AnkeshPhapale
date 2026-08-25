@@ -1,6 +1,6 @@
 <svg viewBox="0 0 460 90" width="460" height="90" xmlns="http://www.w3.org/2000/svg" font-family="basic-mono, monospace"><defs><linearGradient id="accent" x1="0%" x2="100%" y1="0%" y2="100%"><stop offset="0%" stop-color="#38bdf8"/><stop offset="55%" stop-color="#818cf8"/><stop offset="100%" stop-color="#2dd4bf"/></linearGradient></defs><style>text{fill:#0f172a} .dim{fill:#64748b} .accent{fill:url(#accent)}</style>
-<text x="10" y="28" font-size="20" fill="#7c3aed">2 day streak</text>
-<text x="10" y="46" font-size="12" class="dim">2026-08-18 to 2026-08-24</text>
+<text x="10" y="28" font-size="20" fill="#7c3aed">1 day streak</text>
+<text x="10" y="46" font-size="12" class="dim">2026-08-24 to 2026-08-25</text>
 <text x="10" y="70" font-size="14" fill="#0f766e">longest: 3 days</text>
 <text x="10" y="86" font-size="12" class="dim">2026-07-22 to 2026-07-24</text>
 </svg>

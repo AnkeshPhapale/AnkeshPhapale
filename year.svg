@@ -1,7 +1,6 @@
 <svg viewBox="0 0 762 118" width="762" height="118" xmlns="http://www.w3.org/2000/svg" font-family="basic-mono, monospace"><defs><linearGradient id="accent" x1="0%" x2="100%" y1="0%" y2="100%"><stop offset="0%" stop-color="#38bdf8"/><stop offset="55%" stop-color="#818cf8"/><stop offset="100%" stop-color="#2dd4bf"/></linearGradient></defs><style>text{fill:#0f172a} .dim{fill:#64748b} .accent{fill:url(#accent)}</style>
-<rect x="10" y="10" width="11" height="11" rx="2" fill="#e2e8f0"><title>2025-08-28: 0</title></rect>
-<rect x="10" y="24" width="11" height="11" rx="2" fill="#e2e8f0"><title>2025-08-29: 0</title></rect>
-<rect x="10" y="38" width="11" height="11" rx="2" fill="#e2e8f0"><title>2025-08-30: 0</title></rect>
+<rect x="10" y="10" width="11" height="11" rx="2" fill="#e2e8f0"><title>2025-08-29: 0</title></rect>
+<rect x="10" y="24" width="11" height="11" rx="2" fill="#e2e8f0"><title>2025-08-30: 0</title></rect>
 <rect x="24" y="10" width="11" height="11" rx="2" fill="#e2e8f0"><title>2025-08-31: 0</title></rect>
 <rect x="24" y="24" width="11" height="11" rx="2" fill="#e2e8f0"><title>2025-09-01: 0</title></rect>
 <rect x="24" y="38" width="11" height="11" rx="2" fill="#e2e8f0"><title>2025-09-02: 0</title></rect>
@@ -364,4 +363,5 @@
 <rect x="738" y="38" width="11" height="11" rx="2" fill="#e2e8f0"><title>2026-08-25: 0</title></rect>
 <rect x="738" y="52" width="11" height="11" rx="2" fill="#e2e8f0"><title>2026-08-26: 0</title></rect>
 <rect x="738" y="66" width="11" height="11" rx="2" fill="#e2e8f0"><title>2026-08-27: 0</title></rect>
+<rect x="738" y="80" width="11" height="11" rx="2" fill="#e2e8f0"><title>2026-08-28: 8</title></rect>
 </svg>

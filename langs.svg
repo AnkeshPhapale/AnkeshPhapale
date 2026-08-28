@@ -1,20 +1,20 @@
 <svg viewBox="0 0 460 156" width="460" height="156" xmlns="http://www.w3.org/2000/svg" font-family="basic-mono, monospace"><defs><linearGradient id="accent" x1="0%" x2="100%" y1="0%" y2="100%"><stop offset="0%" stop-color="#38bdf8"/><stop offset="55%" stop-color="#818cf8"/><stop offset="100%" stop-color="#2dd4bf"/></linearGradient></defs><style>text{fill:#0f172a} .dim{fill:#64748b} .accent{fill:url(#accent)}</style>
 <text x="10" y="26" font-size="13">Jupyter Notebook</text>
-<rect x="140" y="15" width="167.7" height="12" fill="#DA5B0B" opacity="0.9" />
-<text x="390" y="26" font-size="12" class="dim">69.9%</text>
-<text x="10" y="48" font-size="13">JavaScript</text>
-<rect x="140" y="37" width="22.2" height="12" fill="#f1e05a" opacity="0.9" />
-<text x="390" y="48" font-size="12" class="dim">9.2%</text>
-<text x="10" y="70" font-size="13">HTML</text>
-<rect x="140" y="59" width="22.2" height="12" fill="#e34c26" opacity="0.9" />
-<text x="390" y="70" font-size="12" class="dim">9.2%</text>
+<rect x="140" y="15" width="162.3" height="12" fill="#DA5B0B" opacity="0.9" />
+<text x="390" y="26" font-size="12" class="dim">67.6%</text>
+<text x="10" y="48" font-size="13">HTML</text>
+<rect x="140" y="37" width="28.9" height="12" fill="#e34c26" opacity="0.9" />
+<text x="390" y="48" font-size="12" class="dim">12.0%</text>
+<text x="10" y="70" font-size="13">JavaScript</text>
+<rect x="140" y="59" width="21.8" height="12" fill="#f1e05a" opacity="0.9" />
+<text x="390" y="70" font-size="12" class="dim">9.1%</text>
 <text x="10" y="92" font-size="13">PHP</text>
-<rect x="140" y="81" width="14.2" height="12" fill="#4F5D95" opacity="0.9" />
-<text x="390" y="92" font-size="12" class="dim">5.9%</text>
+<rect x="140" y="81" width="13.8" height="12" fill="#4F5D95" opacity="0.9" />
+<text x="390" y="92" font-size="12" class="dim">5.7%</text>
 <text x="10" y="114" font-size="13">Python</text>
-<rect x="140" y="103" width="8.6" height="12" fill="#3572A5" opacity="0.9" />
-<text x="390" y="114" font-size="12" class="dim">3.6%</text>
+<rect x="140" y="103" width="8.3" height="12" fill="#3572A5" opacity="0.9" />
+<text x="390" y="114" font-size="12" class="dim">3.5%</text>
 <text x="10" y="136" font-size="13">SCSS</text>
-<rect x="140" y="125" width="5.1" height="12" fill="#c6538c" opacity="0.9" />
+<rect x="140" y="125" width="5.0" height="12" fill="#c6538c" opacity="0.9" />
 <text x="390" y="136" font-size="12" class="dim">2.1%</text>
 </svg>

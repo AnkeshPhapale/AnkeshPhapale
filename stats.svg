@@ -1,5 +1,5 @@
 <svg viewBox="0 0 460 140" width="460" height="140" xmlns="http://www.w3.org/2000/svg" font-family="basic-mono, monospace"><defs><linearGradient id="accent" x1="0%" x2="100%" y1="0%" y2="100%"><stop offset="0%" stop-color="#38bdf8"/><stop offset="55%" stop-color="#818cf8"/><stop offset="100%" stop-color="#2dd4bf"/></linearGradient></defs><style>text{fill:#0f172a} .dim{fill:#64748b} .accent{fill:url(#accent)}</style>
-<text x="10" y="30" font-size="26" class="accent">118</text>
+<text x="10" y="30" font-size="26" class="accent">120</text>
 <text x="10" y="50" font-size="12" class="dim">contributions, last 12 months</text>
 <rect x="10.00" y="128.00" width="7.46" height="0.00" fill="url(#accent)" opacity="0.9" />
 <rect x="18.46" y="128.00" width="7.46" height="0.00" fill="url(#accent)" opacity="0.9" />
@@ -52,5 +52,5 @@
 <rect x="416.15" y="124.21" width="7.46" height="3.79" fill="url(#accent)" opacity="0.9" />
 <rect x="424.62" y="73.00" width="7.46" height="55.00" fill="url(#accent)" opacity="0.9" />
 <rect x="433.08" y="118.52" width="7.46" height="9.48" fill="url(#accent)" opacity="0.9" />
-<rect x="441.54" y="127.05" width="7.46" height="0.95" fill="url(#accent)" opacity="0.9" />
+<rect x="441.54" y="125.16" width="7.46" height="2.84" fill="url(#accent)" opacity="0.9" />
 </svg>
